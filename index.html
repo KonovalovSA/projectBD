@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+	<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>jQuery UI Datepicker - Default functionality</title>
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	</head>
+  <body>
+    <!-- Панель таблицы -->
+    <div class="container mb-3 mt-3 panel">
+    <!-- Календарь -->
+      <div class="calendar">
+          <p>Date: <input type="text" name="datepicker" id="datepicker"></p>
+          <button type="submit" id="btn">Выбрать месяц</button>
+      </div>
+    <!-- Премия -->
+      <div class="bonus">
+        <input type="number" name="bonus" id="bonus" placeholder="Выдать премию">
+        <select id="positionBonus">
+            <option value="1" required>Бугхалтерам</option>
+            <option value="2">Курьерам</option>
+            <option value="3">Менеджерам</option>
+          </select>
+        <button type="submit" id="btnBonus" onsubmit="return false;">Выдать премию</button>
+      </div>
+      <!-- Добавление сотрудника -->
+      <div class="formAddWorker">
+        <form onsubmit="return false;">
+          <h6>Добавить сотрудника</h6>
+          <input type="text" name="name" id="name" placeholder="Имя">
+          <input type="text" name="surname" id="surname" placeholder="Фамилия">
+          <select id="position">
+            <option value="1" required>Бугхалтер</option>
+            <option value="2">Курьер</option>
+            <option value="3">Менеджер</option>
+          </select>
+          <input type="number" name="wages" id="wages" placeholder="Зарплата">
+          <button type="submit" id="btnAdd">Добавить нового сотрудника</button>
+        </form>
+      </div>
+      <!-- Добавление фото -->
+      <div class="addFoto">
+        <input type="number" name="if" id="id" placeholder="id сотрудника">
+        <input type="file" multiple="multiple" accept=".txt,image/*">
+        <button href="#" class="upload_files button">Загрузить файлы</button>
+      </div>
+    </div>
+    <!-- Заголовок таблицы-->
+    <table class="table">
+      <thead>
+        <th>
+          <div>id</div>
+        </th>
+        <th>
+          <div>Имя</div>
+        </th>
+        <th>
+          <div>Фамилия</div>
+        </th>
+        <th>
+          <div>Должность</div>
+        </th>
+        <th>
+          <div class="blockWages"><input type="button" id="curs" value="Зарплата за месяц в Рублях"></div>
+        </th>
+        <th>
+          <div>Фото</div>
+        </th>
+      </thead>
+      <!-- Тело таблицы, данные из базы mysql -->
+      <tbody name="result" id="result"></tbody>
+    </table>
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+     
+    <!-- Optional JavaScript -->
+    <script src="js/index.js"></script>
+  </body>
+</html>
